@@ -27,6 +27,7 @@ function startWebSocketForMic() {
     var uri = 'wss://' + hostString + window.applicationRoot + '/ws/speechtotextdemo?language=' + $('#languageoptions').val()
             + '&g_Recaptcha_Response=' + reCaptchaSdk.g_Recaptcha_Response + '&isNeedVerify=' + reCaptchaSdk.isNeedVerify;
     websocket = getWebSocket(uri);
+    console.log(uri)
     websocket.onopen = function () {
         audioRecorder.sendHeader(websocket);
         audioRecorder.record(websocket);
