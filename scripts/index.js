@@ -14,7 +14,6 @@ $(document).ready(function () {
         $('.mic').hide();
         $('#microphoneText').hide();
         $('.warnInfo').show();
-        $('.firstRow').css("backgroundColor", "white");
     } 
 
 
@@ -30,23 +29,8 @@ $(document).ready(function () {
         console.log('clickedddd')
         micOnClick();
     });
+        
     
-    $('.miccheck').click(function(){
-        console.log('wazzup')
-    })
-
-    $('#languageoptions').change(function () {
-        stopRecording();
-        var lang = $('#languageoptions').val();
-
-        // fr-fr only have one good sample for now
-        if (lang == 'fr-FR') {
-            $('#speech_sample_2').hide();
-        } else {
-            $('#speech_sample_2').show();
-        }
-        $('#hidden').html("<audio preload=\"auto\" autobuffer controls src=\"" + window.applicationRoot + "/Modules/Microsoft.ProjectOxford.Website.Demos/Audios/" + lang.toLowerCase() + "-1.mp3\" class=\"sample1\"></audio><audio preload=\"auto\" autobuffer controls src=\"" + window.applicationRoot + "/Modules/Microsoft.ProjectOxford.Website.Demos/Audios/" + lang.toLowerCase() + "-2.mp3\" class=\"sample2\"></audio>");
-    });
 });
 
 function startDemo() {

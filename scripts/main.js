@@ -49,7 +49,7 @@ function stopRecording() {
         }
         audioRecorder.stop();
         stopWebSocket();
-        $('.mic.demo_btn').removeClass("listening");
+        $('.mic').text('Start')
         $('#microphoneText').text("Click on the microphone to start speaking.");
     }
 }

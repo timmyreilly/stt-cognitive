@@ -31,7 +31,7 @@ function startWebSocketForMic() {
         audioRecorder.sendHeader(websocket);
         audioRecorder.record(websocket);
 
-        $('.mic.demo_btn').addClass("listening");
+        $('.mic').text('stop');
         $('#microphoneText').text("Please speak. Click on the microphone again to stop listening.");
     };
 }
